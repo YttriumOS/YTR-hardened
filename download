@@ -1,0 +1,14 @@
+#!/bin/bash
+
+version="5.4.108"
+
+kernel_sha256sums_file="https://kernel.org/pub/linux/kernel/v5.x/sha256sums.asc"
+kernel_source_signature="https://kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.sign"
+kernel_source_archive="https://kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
+
+curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
+
+curl $curl_opts "${kernel_sha256sums_file}" -o "./sha256sums.asc"
+curl $curl_opts "${kernel_source_signature}" -o "./linux-${version}.tar.sign"
+curl $curl_opts "${kernel_source_archive}" -o "./linux-${version}.tar.xz"
+

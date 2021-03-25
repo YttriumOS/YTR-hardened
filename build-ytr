@@ -1,0 +1,21 @@
+#!/bin/bash
+
+version="linux-5.4.108.tar.xz"
+
+main_folder="linux-5.4.108"
+
+tar xvf ${version}
+
+cd ${main_folder}
+
+cp -v x86_64-dotconfig-custom .config
+
+make menuconfig
+
+make
+
+sudo make modules_install
+
+sudo make install 
+
+
