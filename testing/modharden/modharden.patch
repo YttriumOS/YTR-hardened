@@ -143,7 +143,7 @@ diff -rcNP og/security/Kconfig patched/security/Kconfig
 + 	  Alternatively, the administrator can add the module to the list
 + 	  of modules loaded at boot by modifying init scripts.
 + 
-+ 		This setting can be overridden at runtime via the
++ 	 This setting can be overridden at runtime via the
 + 	 kernel.modharden sysctl.
 + 
 + 	 If unsure say N.
