@@ -790,7 +790,7 @@ index 5b5759d70822..63ab73f6121c 100644
  /**
   * may_follow_link - Check symlink following for unsafe situations
 diff --git a/fs/nfs/Kconfig b/fs/nfs/Kconfig
-index e7dd07f47825..2b357b4355fd 100644
+index e84c187d942e..fdac5ca7f677 100644
 --- a/fs/nfs/Kconfig
 +++ b/fs/nfs/Kconfig
 @@ -195,4 +195,3 @@ config NFS_DEBUG
@@ -1034,7 +1034,7 @@ index 069aa2ebef90..cb9e3637a620 100644
  const struct kobj_ns_type_operations *kobj_child_ns_ops(struct kobject *parent);
  const struct kobj_ns_type_operations *kobj_ns_ops(struct kobject *kobj);
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index c63e4b38b7fe..f52bffd30ebc 100644
+index 703e0d72a05c..2a9300cc11e7 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -664,7 +664,7 @@ static inline int is_vmalloc_or_module_addr(const void *x)
@@ -1965,7 +1965,7 @@ index eae6a078619f..f4944948f015 100644
  EXPORT_SYMBOL(proc_dointvec_ms_jiffies);
  EXPORT_SYMBOL(proc_dostring);
 diff --git a/kernel/time/hrtimer.c b/kernel/time/hrtimer.c
-index 299a4c5b6cf8..b3e512ca59c5 100644
+index 1f3e3a17f67e..72589694911f 100644
 --- a/kernel/time/hrtimer.c
 +++ b/kernel/time/hrtimer.c
 @@ -1601,7 +1601,7 @@ static void __hrtimer_run_queues(struct hrtimer_cpu_base *cpu_base, ktime_t now,
@@ -2687,7 +2687,7 @@ index ab358c64bbd3..afb474c171f7 100644
  
  unsigned long arch_mmap_rnd(void)
 diff --git a/net/core/dev.c b/net/core/dev.c
-index e732faade5dc..0c5acc5e74c7 100644
+index 2ec21380f86d..c04970423343 100644
 --- a/net/core/dev.c
 +++ b/net/core/dev.c
 @@ -4474,7 +4474,7 @@ int netif_rx_ni(struct sk_buff *skb)
