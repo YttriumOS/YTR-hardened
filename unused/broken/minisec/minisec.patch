@@ -3275,7 +3275,7 @@ diff -rcNP og/include/linux/mm_types.h patched/include/linux/mm_types.h
   		struct work_struct async_put_work;
   	} __randomize_layout;
   
-+ if defined(CONFIG_MINISEC)
++ #if defined(CONFIG_MINISEC)
 + 		unsigned long pax_flags;
 + #endif
 + 
@@ -3423,7 +3423,7 @@ diff -rcNP og/include/linux/sched.h patched/include/linux/sched.h
   	unsigned long			prev_lowest_stack;
   #endif
   
-+ ifdef CONFIG_MINISEC
++ #ifdef CONFIG_MINISEC
 + 	struct dentry *gr_chroot_dentry;
 + 	u8 gr_is_chrooted;
 + #endif
